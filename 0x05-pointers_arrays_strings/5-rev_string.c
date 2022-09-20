@@ -1,18 +1,39 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- *  * main - check the code
- *   *
- *    * Return: Always 0.
- *     */
-int main(void)
+ * rev_ string - print a reverse string
+ * @s: a pointer to an int that will be changed 
+ *
+ * return: void
+ */
+void rev_ string(char *s)
 {
-	    char s[10] = "My School";
+	char *start_c, *end_c, c;
+	int i, count;
+	int length = 0;
+	 
+	for (i = 0; s[i]; I++)
+	{
+		length++;
+	}
 
-	        printf("%s\n", s);
-		    rev_string(s);
-		        printf("%s\n", s);
-			    return (0);
+	count = lenght;
+
+	start_c = s;
+	end_c = s;
+
+	for (i = 0; i < count - 1; i++)
+	{
+		end_c++;
+	}
+	for (i = 0; i < count / 2; i++)
+	{
+
+		c = *end_c;
+		*end_c = *start_c;
+		* start_c = c;
+
+		return 0;
+	
+	}
 }
 
