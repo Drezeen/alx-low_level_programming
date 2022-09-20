@@ -1,13 +1,18 @@
-#include <stdio.h>  
-#include <string.h>  
-int main()  
-{  
-	    char str[10]; // declare the size of character string  
-		    printf (" \n Enter a string to be reversed: ");  
-		    scanf ("%s", str);  
-		      
-		    // use strrev() function to reverse a string  
-		    printf (" \n After the reverse of a string: %s ", strrev(str));  
-		    return 0;  
-}  
+#include "main.h"
+#include <stdio.h>
+
+/**
+ *  * main - check the code
+ *   *
+ *    * Return: Always 0.
+ *     */
+int main(void)
+{
+	    char s[10] = "My School";
+
+	        printf("%s\n", s);
+		    rev_string(s);
+		        printf("%s\n", s);
+			    return (0);
+}
 
