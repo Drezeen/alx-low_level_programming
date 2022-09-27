@@ -1,1 +1,1 @@
-a function that fills memory with a constant byte.
+function that point the char to integers
