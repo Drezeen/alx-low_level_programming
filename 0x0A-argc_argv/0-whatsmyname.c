@@ -11,4 +11,3 @@ int main(int argc __attribute__((unused)), char *agrv[])
 	printf("%s\n", *agrv);
 	return (0);
 }
-
