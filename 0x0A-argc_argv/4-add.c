@@ -7,15 +7,15 @@
  * argv: an array of a command listed
  * Return: 0 for success 
  */
-int main(int argc, char *arg[])
+int main(int argc, char *argv[])
 {
 	int result = 0, num, i, j, k;
 	 
 	for (i = 0; i < argc; i++)
 	{
-		for ( j = 0; arg[i][j] != '\0'; j++)
+		for ( j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (arg[i][j] > '9' || arg[i][j] < '0')
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
 				printf("%s\n", "Error");
 				return (1);
