@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	 
 	for (i = 0; i < argc; i++)
 	{
-		for ( j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	for ( k = 0; k < argc; k++)
+	for (k = 0; k < argc; k++)
 	{
 		num = atoi(argv[k]);
 		result += num;
