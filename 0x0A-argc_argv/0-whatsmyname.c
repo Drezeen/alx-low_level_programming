@@ -8,7 +8,7 @@
  */
 int main(int argc _attribute_((unused)), char *agrv[])
 {
-	printf("%s\n", *agr);
+	printf("%s\n", *agrv);
 	return (0);
 }
 
