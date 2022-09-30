@@ -6,9 +6,9 @@
  * argv: an array of a command listed
  * Return: 0 for success 
  */
-int main(int argc _attribute_((unused)), char *agrv[])
+int main(int argc __attribute__((unused)), char *agrv[])
 {
-	printf("%s\n", *agrv);
+	printf("%s\n", *agr);
 	return (0);
 }
 
