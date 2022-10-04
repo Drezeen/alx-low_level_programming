@@ -9,7 +9,8 @@
  *  Return: NUL in case of error.
  *  pointer to the allocated space
  */
-char *str_concat(char *s1, char *s2){
+char *_strdup(char *str)
+{
 	char *cpy;
 	int index, len;
 
