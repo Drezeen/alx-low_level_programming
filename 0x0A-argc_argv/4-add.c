@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * main -> this the function to print it's name
- * @argc: agrc parameter
- * argv: an array of a command listed
- * Return: 0 for success 
+ * main - adds numbers
+ * @argc: number of arguments passed to the function
+ * @argv: argument vector of pointers to strings
+ *
+ * Return: 0 if no errors, else 1
  */
 int main(int argc, char *argv[])
 {
-	int result = 0, num, i, j, k;
-	 
-	for (i = 0; i < argc; i++)
+	int a = 0, i, j;
+
+	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[i][j]; j++)
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
+			if (isdigit(argv[i][j]) == 0)
 			{
-				printf("%s\n", "Error");
+				puts("Error");
 				return (1);
 			}
 		}
 	}
-	for (k = 0; k < argc; k++)
+	for (i = 1; i < argc; i++)
 	{
-		num = atoi(argv[k]);
-		result += num;
-	} 
-	printf("%d\n", result);
+		a += atoi(argv[i]);
+	}
+	printf("%d\n", a);
 	return (0);
 }
-
