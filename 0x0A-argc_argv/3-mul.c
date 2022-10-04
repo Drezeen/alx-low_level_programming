@@ -2,24 +2,23 @@
 #include <stdlib.h>
 
 /**
- * main -> this the function to print it's name
- * @argc: agrc parameter
- * argv: an array of a command listed
- * Return: 0 for success 
+ * main - program that prints its name, followed by a new line
+ * @argc: argument that counts argument input
+ * @argv: argument that stores the strings in an array of char* (strings)
+ * Return: 0
  */
-int main(int argc, char *arg[])
+int main(int argc, char *argv[])
 {
-	int result, num1, num2;
-	 
-	if (argc != 3)
-	{
-		printf("%s\n", "Error");
-		return (1);
-	}
-	num1 = atoi(arg[1]);
-	num2 = atoi(arg[2]);
-	result = num1 * num2;
+	int num_1, num_2, mul;
 
-	printf("%d\n", result);
+	if (argc != 3)
+		printf("Error\n");
+	else
+	{
+		num_1 = atoi(argv[1]);
+		num_2 = atoi(argv[2]);
+		mul = num_1 * num_2;
+		printf("%d\n", mul);
+	}
 	return (0);
 }
