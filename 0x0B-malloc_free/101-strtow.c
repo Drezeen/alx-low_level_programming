@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * len - return the length of str
- * @str: string to be counted
- *
- * Return: return length of string
+ *   len - returns length of str
+ *    @str: string to be counted
+ *     
+ *      Return: length of the string
  */
- int len(char *str)
+
+int len(char *str)
 {
 	int len = 0;
 
@@ -14,14 +15,15 @@
 	{
 		while (str[len])
 			len++;
-		 }
+	}
 	return (len);
 }
+
 /**
- * num_words - count the number of word in the string
- * @str: string to be used
- *
- * return: number of words
+ *   num_words - counts the number of words in str
+ *    @str: string to be used
+ *     
+ *      Return: number of words
  */
 int num_words(char *str)
 {
@@ -45,11 +47,12 @@ int num_words(char *str)
 	}
 	return (words);
 }
+
 /**
- * strtow - split a string into words
- * @str: string to be splitted
- *
- * Return: pointer to the array of splitted words
+ *  strtow - splits a stirng into words
+ *   @str: string to be splitted
+ *    
+ *     Return: pointer to the array of splitted words
  */
 
 char **strtow(char *str)
@@ -59,16 +62,16 @@ char **strtow(char *str)
 
 	if (words == 0)
 		return (NULL);
-	split = (char **) malloc(sizeof(char *) * (words + 1));
+	split = (char **)malloc(sizeof(char *) * (words + 1));
 	if (split != NULL)
 	{
-		for (i =0; i <= len(str) && words; i++)
+		for (i = 0; i <= len(str) && words; i++)
 		{
-			if ((str[i] == ' ') && (str[i] == '\0'))
+			if ((str[i] != ' ') && (str[i] != '\0'))
 				size++;
-			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i -1] != ' '))
+			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
-				split[j] = (char *) malloc(sizeof(char) * size + 1);
+				split[j] = (char *)malloc(sizeof(char) * size + 1);
 				if (split[j] != NULL)
 				{
 					while (temp < size)
