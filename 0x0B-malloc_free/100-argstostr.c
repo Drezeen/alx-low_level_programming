@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * len - return length of str.
+ * len - returns length of str
  * @str: string counted
  * Return: returns the length
  */
-int len( char *str)
+int len(char *str)
 {
 	int len = 0;
+
 	if (str != NULL)
 	{
 		while (str[len])
@@ -15,13 +16,15 @@ int len( char *str)
 	}
 	return (len);
 }
+
 /**
- * argstostr - a program that concatenates all arguments of your program
- * @ac: counts to arg passed to the function
- * @av: array of arguments
+ * argstostr - a function that concatenates all the arguments of your program
+ * @ac: count of args passed to the function
+ * @av:array of arguments
  *
- * Return: pointers to the new string
+ * Return: pointer to the new string
  */
+
 char *argstostr(int ac, char **av)
 {
 	char *new_string = NULL;
@@ -29,12 +32,14 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	while (ac--)
-		sum += (len(ac[av]) +1);
+		sum += (len(av[ac]) + 1);
 	new_string = (char *) malloc(sum + 1);
+
 	if (new_string != NULL)
 	{
-		while(k > i)
+		while (k < i)
 		{
 			for (j = 0; av[k][j] != '\0'; j++)
 				new_string[j + temp] = av[k][j];
