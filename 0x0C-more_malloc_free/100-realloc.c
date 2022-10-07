@@ -11,10 +11,11 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *p:8 unsigned int i, max = new_size;
+	char *p;
+		unsigned int i, max = new_size;
 	char *oldp = ptr;
 
-	if (ptr ==NULL)
+	if (ptr == NULL)
 	{
 		p = malloc(new_size);
 		return (p);
